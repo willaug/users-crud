@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/list.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/settings.css">
+    <script src="assets/js/validate.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+    <title>Seja bem vindo(a) | Go</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="logo-title" role="logo">Go</p>
+        </header>
+        <main>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item selected" data-title="Seja bem vindo(a) | Go" data-section="home"><i class="ri-home-4-line"></i></li>
+                    <li class="nav-item" data-title="Usuários | Go" data-section="listUsers"><i class="ri-file-list-line"></i></li>
+                    <li class="nav-item" data-title="Adicionar usuário | Go" data-section="addUser"><i class="ri-user-add-line"></i></li>
+                    <li class="nav-item" data-title="Configurações | Go" data-section="settings"><i class="ri-settings-5-line"></i><li>
+                </ul>
+            </nav>
+            <section>
+                <!-- home -->
+                <div id="home" class="section section-activated" style="opacity: 1; display: block;">
+                    <h1 align="center">Vamos começar ?</h1>
+                    <div class="grid-items">
+                        <div class="item" id="usersSection">
+                            <i class="ri-file-list-line ico"></i>
+                            <p>Usuários</p>
+                        </div>
+                        <div class="item" id="addUserSection">
+                            <i class="ri-user-add-line ico"></i>
+                            <p>Adicionar usuário</p>
+                        </div>
+                        <div class="item" id="settingsSection">
+                            <i class="ri-settings-5-line ico"></i>
+                            <p>Configurações</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- listUsers -->
+                <div id="listUsers" class="section" style="display: none; opacity: 0;">
+                    <h1 align="center">Usuários</h1>
+                    <ul id="list" class="list-users">
+                    </ul>
+                </div>
+                <!-- add user -->
+                <div id="addUser" style="display: none; opacity: 0;" class="section">
+                    <h1 align="center">Adicionar usuário</h1>
+                    <form id="AddUserForm" class="form-container">
+                        <div class="input-container">
+                            <input type="text" placeholder="Primeiro nome" id="name" class="input" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$">
+                            <span class="error"></span>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" placeholder="Sobrenome" id="lastname" class="input" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$">
+                            <span class="error"></span>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" placeholder="E-mail" id="email" class="input" required>
+                            <span class="error"></span>
+                        </div>
+                        <button type="submit" class="btn">Adicionar</button>
+                        <div class="messageFinish"></div>
+                    </form>
+                </div>
+                <!-- edit user -->
+                <div id="editUser" class="section" style="opacity: 0; display: none;">
+                    <h1 align="center">Editar usuário</h1>
+                    <form id="ChangeUserForm" class="form-container">
+                        <input type="hidden" id="idEdit">
+                        <div class="input-container">
+                            <input type="text" placeholder="Primeiro nome" id="nameEdit" class="input" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ']+$">
+                            <span class="error"></span>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" placeholder="Sobrenome" id="lastnameEdit" class="input" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$">
+                            <span class="error"></span>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" placeholder="E-mail" id="emailEdit" class="input" required>
+                            <span class="error"></span>
+                        </div>
+                        <button type="submit" class="btn">Confirmar alterações</button>
+                        <div class="messageFinish"></div>
+                    </form>
+                </div>
+                <!-- delete all datas -->
+                <div id="settings" class="section" style="display: none; opacity: 0;">
+                    <h1 align="center">Configurações</h1>
+                    <div class="delete-card">
+                        <p>Deseja deletar todos os usuários?</p>
+                        <button id="deleteAll"><i class="ri-delete-bin-7-fill icon"></i> Deletar tudo</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@400;600;700&family=Poppins:wght@200;300;400&display=swap');
+
+:root{
+    --OpenSans: 'Open Sans', sans-serif;
+    --Poppins: 'Poppins', sans-serif;
+    --Montserrat: 'Montserrat', sans-serif;
+
+    --primary-color: #222222;
+    --light-color: #F1F5FA;
+    --white-color: #FFFFFF;
+    --light-gray-color: #c9c7c7;
+    --gray-color: #555555;
+    --dark-color: #30323D;
+
+    --bg-error: #f64747;
+    --bg-success: #3fc380; 
+}

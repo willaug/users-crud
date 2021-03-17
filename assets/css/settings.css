@@ -1,0 +1,55 @@
+.delete-card{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90px;
+    display: flex;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 7px;
+}
+
+.delete-card p{
+    margin-left: 20px;
+    line-height: 90px;
+    font-family: var(--Poppins);
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--gray-color);
+}
+
+.delete-card button{
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--bg-error);
+    color: var(--bg-error);
+    font-family: var(--OpenSans);
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    top: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+    height: 40px;
+    width: 190px;
+    text-align: center;
+    transform: translateY(-50%);
+    margin-left: 30px;
+    border-radius: 4px;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.delete-card button:hover{
+    background-color: var(--bg-error);
+    color: var(--white-color);
+}
+
+.delete-card button .icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14px;
+}

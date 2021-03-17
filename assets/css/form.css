@@ -1,0 +1,121 @@
+/* form */
+.form-container{
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.input-container{
+    position: relative;
+    margin-bottom: 12px;
+    height: 47px;
+    width: 100%;
+}
+
+.input{
+    position: relative;
+    display: block;
+    height: 47px;
+    width: 100%;
+    font-size: 17px;
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 18px;
+    font-family: var(--OpenSans);
+    background-color: var(--light-color);
+    transition: all .3s ease;
+}
+
+.btn{
+    margin-top: 22px;
+    height: 42px;
+    width: 100%;
+    background: var(--gray-color);
+    color: var(--white-color);
+    transition: all .3s ease;
+    font-size: 17px;
+    font-family: var(--OpenSans);
+    letter-spacing: 0.3px;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    position: relative;
+    border-radius: 10px;
+}
+
+.btn:focus{
+    background: var(--primary-color);
+}
+
+.input:focus{
+    background-color: #edeff1;
+}
+
+.error{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-error);
+    color: var(--white-color);
+    padding: 10px;
+    border-radius: 8px;
+    right: 330px;
+    font-family: var(--Poppins);
+    font-weight: 400;
+    font-size: 14px;
+    width: 200px;
+    display: block;
+    transition: all .2s ease;
+    visibility: hidden;
+    opacity: 0;
+    word-wrap:break-word;
+    white-space: normal
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.error::after{
+    content: '';
+    border-top: 8px solid transparent;
+    border-left: 8px solid var(--bg-error);
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    transform: translateY(-50%);
+    left: 99%;
+}
+
+.messageFinish{
+    position: relative;
+    margin-top: 17px;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    font-size: 14px;
+    color: var(--white-color);
+    transition: all .2s ease;
+    font-family: var(--Poppins);
+}
+
+.messageVisible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.failure{
+    background: var(--bg-error);
+}
+
+.success{
+    background: var(--bg-success);
+}
